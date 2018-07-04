@@ -5,7 +5,7 @@ class Artist
 
   def initialize(name)
     @name = name
-    @@all<<self
+    @@all << self
   end
 
   def self.all
@@ -13,7 +13,7 @@ class Artist
   end
 
   def songs
-    Songs.all.select do |song|
+    Song.all.select do |song|
       song.artist == self
     end
   end
